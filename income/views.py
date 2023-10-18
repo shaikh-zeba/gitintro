@@ -42,6 +42,5 @@ def list(request):
   }
   return render(request,"incdetails.html",d)
 #for frontend
-  
-  
 # Create your views here.
+#changes
