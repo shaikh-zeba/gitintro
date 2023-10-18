@@ -1,0 +1,41 @@
+{%extends 'master.html' %}
+{%block 'main'%}
+<h1>search</h1>
+<table  border="6pxgroovesolid" class="table">
+    <thead>
+        <tr>
+            <th class="table-secondary" >SrNo</th>
+            <th class="table-warning"scope="col" >Amount</th>
+            <th class="table-success" scope="col">date</th>
+            <th class="table-danger"scope="col">type</th>
+            <th class="table-info" scope="col">Description</th>
+            <th class="table-primary"scope="col">Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%for i in data1%}
+        <tr>
+            <th  class="table-primary" scope="row">{{i.id}}</th>
+            <td  class="table-info">{{i.income_amount}}</td>
+            <td class="table-danger">{{i.income_date}}</td>
+            <td class="table-success">{{i.income_type}}</td>
+            <td  class="table-warning">{{i.income_description}}</td>
+            <td class="table-info">Income</td>
+        </tr>
+        {%endfor%}
+        {%for i in data2%}
+        <tr>
+            <th class="table-info" scope="row">{{i.id}}</th>
+            <td class="table-warning">{{i.expense_amount}}</td>
+            <td  class="table-success">{{i.expense_date}}</td>
+            <td class="table-danger">{{i.expense_type}}</td>
+            <td  class="table-primary">{{i.expense_description}}</td>
+            <td class="table-danger">Expense</td>
+        </tr>
+        {%endfor%}
+      
+        
+    </tbody>
+</table>
+
+{%endblock%}
